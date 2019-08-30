@@ -10,10 +10,10 @@ print("Press enter to change setup. Enter exit to exit.")
 # start reading config files
 configServer = configparser.ConfigParser()
 configServer.optionxform = str 
-configServer.read('test_server_cfg.ini')
+configServer.read('/home/steam/assetto/cfg/server_cfg.ini')
 configCar = configparser.ConfigParser()
 configCar.optionxform = str 
-configCar.read('test_entry_list.ini')
+configCar.read('/home/steam/assetto/cfg/entry_list.ini')
 
 firstCar = input("Enter the name of cars. One at a time: ")
 cars = firstCar
@@ -63,8 +63,8 @@ configServer['SERVER']['CONFIG_TRACK'] = track_layout
 # config['SERVER']['NAME'] = serverName
 
 
-with open('test_server_cfg.ini', 'w') as configfileServer:
+with open('/home/steam/assetto/cfg/server_cfg.ini', 'w') as configfileServer:
     configServer.write(configfileServer)
 
-with open('test_entry_list.ini', 'w') as configfileCars:
+with open('/home/steam/assetto/cfg/entry_list.ini', 'w') as configfileCars:
     configCar.write(configfileCars)
